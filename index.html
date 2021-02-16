@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Crud Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+</head>
+
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <label>Product Name*</label><label class="validation-error hide" id="productNameValidationError">This field is required.</label>
+                        <input type="text" name="productName" id="productName">
+                    </div>
+                    <div>
+                        <label>Cost</label>
+                        <input type="text" name="cost" id="cost">
+                    </div>
+                    <div>
+                        <label>Description</label>
+                        <input type="text" name="description" id="description">
+                    </div>
+                    <div>
+                        <label>Image</label>
+                        <input type="text" name="image" id="image">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+
+            <td>
+                <table class="list" id="productList">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Cost</th>
+                                <th>Description</th>
+                                <th>Image</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
