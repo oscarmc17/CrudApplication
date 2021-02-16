@@ -4,35 +4,43 @@
     box-sizing: border-box;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
+body {
+    background-color: #efefef;
+    margin: 20px;
+}
+
+h1 {
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 15px 0 15px;
-    background-color: #efefef;
 }
 
-/* .container {
-    height: 100vh;
+body table{
     width: 100%;
+}
+
+.all {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 15px 0 15px;
-    background-color: #efefef;
-} */
-
-body > table {
-    width: 100%;
+    height: 90vh;
 }
 
-table {
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first {
+    min-width: 450px;
+    flex-grow: 1;
+}
+
+table{
     border-collapse: collapse;
 }
-
-table.list {
+table.list{
     width: 100%;
 }
 
@@ -41,7 +49,6 @@ td, th {
     text-align: left;
     padding: 8px;
 }
-
 tr:nth-child(even),table.list thead>tr {
     background-color: #dddddd;
 }
@@ -56,10 +63,10 @@ input[type=text], input[type=number] {
     box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit]{
     width: 30%;
-    background-color: #FF5733;
-    color: white;
+    background-color: #E67E22;
+    color: #fff;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -67,22 +74,37 @@ input[type=submit] {
     cursor: pointer;
 }
 
-form div.form-action-buttons {
+form div.form-action-buttons{
     text-align: right;
 }
 
-a {
+a{
     cursor: pointer;
     text-decoration: underline;
-    color: #0000ee;
+    color: #DC7633;
     margin-right: 4px;
 }
 
-label.validation-error {
+label.validation-error{
     color:   red;
     margin-left: 5px;
 }
 
-.hide {
+.hide{
     display:none;
+}
+
+
+@media screen and (max-width: 465px) {
+    body {
+        margin: 0px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .first {
+        min-width: 250px;
+    }
 }
